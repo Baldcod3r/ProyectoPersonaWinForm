@@ -11,3 +11,5 @@ E:\FormProyectoPersona\ProyectoFormPersonaAlumno\FormPersonaAlumno\obj\Debug\For
 E:\FormProyectoPersona\ProyectoFormPersonaAlumno\FormPersonaAlumno\obj\Debug\FormPersonaAlumno.pdb
 E:\FormProyectoPersona\ProyectoFormPersonaAlumno\FormPersonaAlumno\obj\Debug\FormPersonaAlumno.formAlumno.resources
 E:\FormProyectoPersona\ProyectoFormPersonaAlumno\FormPersonaAlumno\obj\Debug\FormPersonaAlumno.panelContenedor.resources
+E:\FormProyectoPersona\ProyectoFormPersonaAlumno\FormPersonaAlumno\obj\Debug\FormPersonaAlumno.formEliminar.resources
+E:\FormProyectoPersona\ProyectoFormPersonaAlumno\FormPersonaAlumno\obj\Debug\FormPersonaAlumno.formListarAlumno.resources

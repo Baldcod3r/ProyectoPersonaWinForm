@@ -60,6 +60,12 @@
     <Compile Include="formAlumno.Designer.cs">
       <DependentUpon>formAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="formEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEliminar.Designer.cs">
+      <DependentUpon>formEliminar.cs</DependentUpon>
+    </Compile>
     <Compile Include="formListarAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formAlumno.resx">
       <DependentUpon>formAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEliminar.resx">
+      <DependentUpon>formEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formListarAlumno.resx">
+      <DependentUpon>formListarAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formMenu.resx">
       <DependentUpon>formMenu.cs</DependentUpon>

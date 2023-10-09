@@ -17,6 +17,8 @@ namespace FormPersonaAlumno
             InitializeComponent();
         }
 
+
+        
         public void formMenu_Load(object sender, EventArgs e)
         {
             FormBorderStyle = FormBorderStyle.None;
@@ -65,6 +67,43 @@ namespace FormPersonaAlumno
             formhija.Show();                                    
 
 
+        }
+
+        private void btnMostrarAutos_Click(object sender, EventArgs e)
+        {
+            SubmenuReportes.Visible = false;
+            AbrirFormEnPanel(new formListarAlumno());
+        }
+
+        private void btnEliminarAutos_Click(object sender, EventArgs e)
+        {
+            SubmenuReportes.Visible = false;
+            AbrirFormEnPanel(new formEliminar());
+        }
+
+        private void crearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new formAlumno());
+        }
+
+        private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new formListarAlumno());
+        }
+
+        private void buscarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new formEliminar());
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

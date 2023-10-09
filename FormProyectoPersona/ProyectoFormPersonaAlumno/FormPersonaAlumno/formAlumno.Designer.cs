@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAlumno));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.clearBtn = new System.Windows.Forms.Button();
+            this.materiasTxtBox = new System.Windows.Forms.TextBox();
+            this.inscriptoCmb = new System.Windows.Forms.ComboBox();
+            this.adeudaCmb = new System.Windows.Forms.ComboBox();
+            this.estadoCmb = new System.Windows.Forms.ComboBox();
             this.inscriptoLbl = new System.Windows.Forms.Label();
             this.carreraTxtBox = new System.Windows.Forms.TextBox();
             this.materiaLbl = new System.Windows.Forms.Label();
@@ -50,15 +55,12 @@
             this.salirSinGuardarBtn = new System.Windows.Forms.Button();
             this.eliminarSelecBtn = new System.Windows.Forms.Button();
             this.guardarEnArchivoBtn = new System.Windows.Forms.Button();
-            this.estadoCmb = new System.Windows.Forms.ComboBox();
-            this.adeudaCmb = new System.Windows.Forms.ComboBox();
-            this.inscriptoCmb = new System.Windows.Forms.ComboBox();
-            this.materiasTxtBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.clearBtn);
             this.groupBox1.Controls.Add(this.materiasTxtBox);
             this.groupBox1.Controls.Add(this.inscriptoCmb);
             this.groupBox1.Controls.Add(this.adeudaCmb);
@@ -87,6 +89,65 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Alumno";
             // 
+            // clearBtn
+            // 
+            this.clearBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.clearBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.clearBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.clearBtn.Location = new System.Drawing.Point(224, 183);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(58, 34);
+            this.clearBtn.TabIndex = 27;
+            this.clearBtn.Text = "Clear";
+            this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            // 
+            // materiasTxtBox
+            // 
+            this.materiasTxtBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.materiasTxtBox.Location = new System.Drawing.Point(89, 213);
+            this.materiasTxtBox.Name = "materiasTxtBox";
+            this.materiasTxtBox.Size = new System.Drawing.Size(100, 20);
+            this.materiasTxtBox.TabIndex = 26;
+            // 
+            // inscriptoCmb
+            // 
+            this.inscriptoCmb.BackColor = System.Drawing.SystemColors.Highlight;
+            this.inscriptoCmb.FormattingEnabled = true;
+            this.inscriptoCmb.Items.AddRange(new object[] {
+            "Si",
+            "No"});
+            this.inscriptoCmb.Location = new System.Drawing.Point(151, 305);
+            this.inscriptoCmb.Name = "inscriptoCmb";
+            this.inscriptoCmb.Size = new System.Drawing.Size(38, 21);
+            this.inscriptoCmb.TabIndex = 25;
+            // 
+            // adeudaCmb
+            // 
+            this.adeudaCmb.BackColor = System.Drawing.SystemColors.Highlight;
+            this.adeudaCmb.FormattingEnabled = true;
+            this.adeudaCmb.Items.AddRange(new object[] {
+            "Si",
+            "No"});
+            this.adeudaCmb.Location = new System.Drawing.Point(151, 274);
+            this.adeudaCmb.Name = "adeudaCmb";
+            this.adeudaCmb.Size = new System.Drawing.Size(38, 21);
+            this.adeudaCmb.TabIndex = 24;
+            // 
+            // estadoCmb
+            // 
+            this.estadoCmb.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.estadoCmb.FormattingEnabled = true;
+            this.estadoCmb.Items.AddRange(new object[] {
+            "Si",
+            "No"});
+            this.estadoCmb.Location = new System.Drawing.Point(151, 243);
+            this.estadoCmb.Name = "estadoCmb";
+            this.estadoCmb.Size = new System.Drawing.Size(38, 21);
+            this.estadoCmb.TabIndex = 23;
+            // 
             // inscriptoLbl
             // 
             this.inscriptoLbl.AutoSize = true;
@@ -98,6 +159,7 @@
             // 
             // carreraTxtBox
             // 
+            this.carreraTxtBox.BackColor = System.Drawing.SystemColors.Highlight;
             this.carreraTxtBox.Location = new System.Drawing.Point(89, 183);
             this.carreraTxtBox.Name = "carreraTxtBox";
             this.carreraTxtBox.Size = new System.Drawing.Size(100, 20);
@@ -114,6 +176,7 @@
             // 
             // cuilTxtBox
             // 
+            this.cuilTxtBox.BackColor = System.Drawing.SystemColors.Highlight;
             this.cuilTxtBox.Location = new System.Drawing.Point(89, 157);
             this.cuilTxtBox.Name = "cuilTxtBox";
             this.cuilTxtBox.Size = new System.Drawing.Size(100, 20);
@@ -121,6 +184,7 @@
             // 
             // dniTxtBox
             // 
+            this.dniTxtBox.BackColor = System.Drawing.SystemColors.Highlight;
             this.dniTxtBox.Location = new System.Drawing.Point(89, 127);
             this.dniTxtBox.Name = "dniTxtBox";
             this.dniTxtBox.Size = new System.Drawing.Size(100, 20);
@@ -146,6 +210,7 @@
             // 
             // apellidoTxtBox
             // 
+            this.apellidoTxtBox.BackColor = System.Drawing.SystemColors.Highlight;
             this.apellidoTxtBox.Location = new System.Drawing.Point(89, 101);
             this.apellidoTxtBox.Name = "apellidoTxtBox";
             this.apellidoTxtBox.Size = new System.Drawing.Size(100, 20);
@@ -153,6 +218,7 @@
             // 
             // nombreTxtBox
             // 
+            this.nombreTxtBox.BackColor = System.Drawing.SystemColors.Highlight;
             this.nombreTxtBox.Location = new System.Drawing.Point(89, 74);
             this.nombreTxtBox.Name = "nombreTxtBox";
             this.nombreTxtBox.Size = new System.Drawing.Size(100, 20);
@@ -233,6 +299,7 @@
             // 
             // alumnoLstBox
             // 
+            this.alumnoLstBox.BackColor = System.Drawing.SystemColors.Highlight;
             this.alumnoLstBox.FormattingEnabled = true;
             this.alumnoLstBox.Location = new System.Drawing.Point(376, 42);
             this.alumnoLstBox.Name = "alumnoLstBox";
@@ -289,37 +356,6 @@
             this.guardarEnArchivoBtn.UseVisualStyleBackColor = true;
             this.guardarEnArchivoBtn.Click += new System.EventHandler(this.guardarEnArchivoBtn_Click);
             // 
-            // estadoCmb
-            // 
-            this.estadoCmb.FormattingEnabled = true;
-            this.estadoCmb.Location = new System.Drawing.Point(151, 243);
-            this.estadoCmb.Name = "estadoCmb";
-            this.estadoCmb.Size = new System.Drawing.Size(38, 21);
-            this.estadoCmb.TabIndex = 23;
-            // 
-            // adeudaCmb
-            // 
-            this.adeudaCmb.FormattingEnabled = true;
-            this.adeudaCmb.Location = new System.Drawing.Point(151, 274);
-            this.adeudaCmb.Name = "adeudaCmb";
-            this.adeudaCmb.Size = new System.Drawing.Size(38, 21);
-            this.adeudaCmb.TabIndex = 24;
-            // 
-            // inscriptoCmb
-            // 
-            this.inscriptoCmb.FormattingEnabled = true;
-            this.inscriptoCmb.Location = new System.Drawing.Point(151, 305);
-            this.inscriptoCmb.Name = "inscriptoCmb";
-            this.inscriptoCmb.Size = new System.Drawing.Size(38, 21);
-            this.inscriptoCmb.TabIndex = 25;
-            // 
-            // materiasTxtBox
-            // 
-            this.materiasTxtBox.Location = new System.Drawing.Point(89, 213);
-            this.materiasTxtBox.Name = "materiasTxtBox";
-            this.materiasTxtBox.Size = new System.Drawing.Size(100, 20);
-            this.materiasTxtBox.TabIndex = 26;
-            // 
             // formAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,5 +403,6 @@
         private System.Windows.Forms.ComboBox adeudaCmb;
         private System.Windows.Forms.ComboBox estadoCmb;
         private System.Windows.Forms.TextBox materiasTxtBox;
+        private System.Windows.Forms.Button clearBtn;
     }
 }

@@ -80,13 +80,16 @@ private void agregarAlumnoBtn_Click(object sender, EventArgs e)
            
             finally
             {
-                LimpiarControles();
+                LimpiarFormulario();
             }
 
 
         }
 
-        private void LimpiarControles()
+
+        
+
+        private void LimpiarFormulario()
         {
             nombreTxtBox.Text = "";
             apellidoTxtBox.Text = "";
@@ -95,6 +98,8 @@ private void agregarAlumnoBtn_Click(object sender, EventArgs e)
             estadoCmb.Text = "";
             inscriptoCmb.Text = "";
             adeudaCmb.Text = "";
+            materiasTxtBox.Text = "";
+            carreraTxtBox.Text = "";
         }
 
         private void eliminarSelecBtn_Click(object sender, EventArgs e)
@@ -129,18 +134,19 @@ private void agregarAlumnoBtn_Click(object sender, EventArgs e)
                 }
                 foreach (Alumno a in alumnoList)
                 {
-                    archivo.WriteLine(a.Nombre);
-                    archivo.WriteLine(a.Apellido);
-                    archivo.WriteLine(a.Dni);
-                    archivo.WriteLine(a.Cuil);
-                    archivo.WriteLine(a.Carrera);
-                    archivo.WriteLine(a.CantidadDeMaterias);
-                    archivo.WriteLine(a.Estado);
-                    archivo.WriteLine(a.AdeudaDocumentacion);
-                    archivo.WriteLine(a.Inscripto);
+                    archivo.Write($" {a.Nombre} * ");
+                    archivo.Write($"{a.Apellido} * "); 
+                    archivo.Write($"{a.Dni} * ");
+                    archivo.Write($"{a.Cuil} * ");
+                    archivo.Write($"{a.Carrera}  * ");
+                    archivo.Write($"{a.CantidadDeMaterias} * ");
+                    archivo.Write($"{a.Estado}  * ");
+                    archivo.Write($"{a.AdeudaDocumentacion}  * ");
+                    archivo.Write($"{a.Inscripto} * ");
 
-                    archivo.WriteLine(DateTime.Now.ToShortTimeString());
-                    archivo.WriteLine("*");
+                    archivo.Write($"{DateTime.Now.ToShortTimeString()} * ");
+                    
+                    archivo.WriteLine("\n###");
                 }
                 archivo.Close();
                 MessageBox.Show("El archivo se guardó correctamente", "Confirmación");
@@ -157,6 +163,11 @@ private void agregarAlumnoBtn_Click(object sender, EventArgs e)
             }
 
 
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            LimpiarFormulario();
         }
     }
 }

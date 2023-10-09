@@ -108,6 +108,7 @@
             this.btnEliminarAutos.TabIndex = 7;
             this.btnEliminarAutos.Text = "Eliminar";
             this.btnEliminarAutos.UseVisualStyleBackColor = true;
+            this.btnEliminarAutos.Click += new System.EventHandler(this.btnEliminarAutos_Click);
             // 
             // btnBuscarAutos
             // 
@@ -140,6 +141,7 @@
             this.btnMostrarAutos.TabIndex = 5;
             this.btnMostrarAutos.Text = "Mostrar";
             this.btnMostrarAutos.UseVisualStyleBackColor = true;
+            this.btnMostrarAutos.Click += new System.EventHandler(this.btnMostrarAutos_Click);
             // 
             // btnCrearAutos
             // 
@@ -216,30 +218,35 @@
             this.crearToolStripMenuItem.Name = "crearToolStripMenuItem";
             this.crearToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.crearToolStripMenuItem.Text = "Crear";
+            this.crearToolStripMenuItem.Click += new System.EventHandler(this.crearToolStripMenuItem_Click);
             // 
             // mostrarToolStripMenuItem
             // 
             this.mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem";
             this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mostrarToolStripMenuItem.Text = "Mostrar";
+            this.mostrarToolStripMenuItem.Click += new System.EventHandler(this.mostrarToolStripMenuItem_Click);
             // 
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
             this.buscarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.buscarToolStripMenuItem.Text = "Buscar";
+            this.buscarToolStripMenuItem.Click += new System.EventHandler(this.buscarToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
             this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
+            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(49, 22);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // pictureBox3
             // 
